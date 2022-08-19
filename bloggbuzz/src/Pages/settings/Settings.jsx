@@ -5,72 +5,72 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
 export default function Settings() {
-  const navigate=useNavigate()
-  const user=localStorage.getItem('user');
-  const ourUser=JSON.parse(user);
-  const [name,setName]=useState('');
-  const [email,setEmail]=useState('');
-  const [password,setPassword]=useState('')
-  const [success,setSuccess]=useState('')
-  const [errorMessage,setErrorMessage]=useState(false)
-  const token=localStorage.getItem('token');
+  const navigate = useNavigate()
+  const user = localStorage.getItem('user');
+  const ourUser = JSON.parse(user);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
+  const [success, setSuccess] = useState('')
+  const [errorMessage, setErrorMessage] = useState(false)
+  const token = localStorage.getItem('token');
   console.log(token);
-  const handleUpdate= async (e)=>{
+  const handleUpdate = async (e) => {
     e.preventDefault()
-    const updatedUser={
+    const updatedUser = {
       name,
       email,
       password
     }
-    try{
-      await axios.patch("http://localhost:5000/user",updatedUser,{
-        headers:({
-          Authorization:'Bearer '+token
+    try {
+      await axios.patch("https://blogbuzz-team4.herokuapp.com/user", updatedUser, {
+        headers: ({
+          Authorization: 'Bearer ' + token
         })
       })
       setSuccess("Profile has been updated");
       //localStorage.setItem()
       //navigate('/')
-    }catch(err){
+    } catch (err) {
       setErrorMessage('Something went wrong. Please try again')
     }
   }
 
-  const handleDelete=async(e)=>{
+  const handleDelete = async (e) => {
     e.preventDefault()
     if (window.confirm("Are you sure you want to remove comment?")) {
-    try{
-      await axios.delete("http://localhost:5000/user",{
-        headers:({
-          Authorization:'Bearer '+token
+      try {
+        await axios.delete("https://blogbuzz-team4.herokuapp.com/user", {
+          headers: ({
+            Authorization: 'Bearer ' + token
+          })
         })
-      })
-      setSuccess("User has been Deleted");
-      //localStorage
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      navigate('/')
-    }catch(err){
-      setErrorMessage('Something went wrong. Please try again')
+        setSuccess("User has been Deleted");
+        //localStorage
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        navigate('/')
+      } catch (err) {
+        setErrorMessage('Something went wrong. Please try again')
+      }
     }
   }
-  }
   return (
-     <div>
-     <Topbar/>
+    <div>
+      <Topbar />
 
-    <div className="settings">
+      <div className="settings">
 
-      <div className="settingsWrapper">
-        <div className="settingsTitle">
-          <span className="settingsTitleUpdate">Update Your Account</span>
-          <button onClick={handleDelete}>
-          <span className="settingsTitleDelete">Delete Account</span>
-          </button>
-          
-        </div>
-        <form className="settingsForm" onSubmit={handleUpdate}>
-          {/* <label>Profile Picture</label>
+        <div className="settingsWrapper">
+          <div className="settingsTitle">
+            <span className="settingsTitleUpdate">Update Your Account</span>
+            <button onClick={handleDelete}>
+              <span className="settingsTitleDelete">Delete Account</span>
+            </button>
+
+          </div>
+          <form className="settingsForm" onSubmit={handleUpdate}>
+            {/* <label>Profile Picture</label>
           <div className="settingsPP">
             <img
               src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -86,35 +86,35 @@ export default function Settings() {
               className="settingsPPInput"
             />
           </div> */}
-          <label>Username</label>
-          <input type="text" placeholder={ourUser.name} name="name" 
-          onChange={e=>setName(e.target.value)}/>
-          <label>Email</label>
-          <input type="email"  placeholder={ourUser.email} name="email" 
-          onChange={e=>setEmail(e.target.value)}/>
-          <label>Password</label>
-          <input type="password" placeholder={ourUser.password} name="password"
-          onChange={e=>setPassword(e.target.value)}/>
-          <button className="settingsSubmitButton" type="submit">
-            Update
-          </button>
-          {success && (
-            <span
-              style={{ color: "green", textAlign: "center", marginTop: "20px" }}
-            >
-              Profile has been updated...
-            </span>
-          )}
-          {errorMessage && (
-            <span
-              style={{ color: "red", textAlign: "center", marginTop: "20px" }}
-            >
-              {errorMessage}
-            </span>
-          )}
-        </form>
+            <label>Username</label>
+            <input type="text" placeholder={ourUser.name} name="name"
+              onChange={e => setName(e.target.value)} />
+            <label>Email</label>
+            <input type="email" placeholder={ourUser.email} name="email"
+              onChange={e => setEmail(e.target.value)} />
+            <label>Password</label>
+            <input type="password" placeholder={ourUser.password} name="password"
+              onChange={e => setPassword(e.target.value)} />
+            <button className="settingsSubmitButton" type="submit">
+              Update
+            </button>
+            {success && (
+              <span
+                style={{ color: "green", textAlign: "center", marginTop: "20px" }}
+              >
+                Profile has been updated...
+              </span>
+            )}
+            {errorMessage && (
+              <span
+                style={{ color: "red", textAlign: "center", marginTop: "20px" }}
+              >
+                {errorMessage}
+              </span>
+            )}
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
