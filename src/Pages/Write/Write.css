@@ -129,9 +129,9 @@ mark,
 audio,
 video {
 	font-family: 'Courier New', Courier, monospace;
-  justify-content: center;
-  position:none;
-  /* float: right; */
+	justify-content: center;
+	position: none;
+	/* float: right; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -153,7 +153,7 @@ section {
 }
 
 body {
-  justify-content:center ;
+	justify-content: center;
 	/* line-height: 1; */
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -612,13 +612,14 @@ h6 {
 .row>* {
 	/* text-align: center;
 	align-content: center; */
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y);
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: calc(var(--bs-gutter-x) * .5);
+	padding-left: calc(var(--bs-gutter-x) * .5);
+	margin-top: var(--bs-gutter-y);
 }
+
 .header .logo {
 	display: inline-block;
 	margin: 5px 0 5px 0;
@@ -1715,8 +1716,8 @@ a.wit-btn {
 *************************************************/
 .listpgWraper {
 	margin-left: 10%;
-  text-align: center;
-  justify-content: center;
+	text-align: center;
+	justify-content: center;
 	/* padding: 50px 0; */
 }
 
@@ -2878,14 +2879,14 @@ a.wit-btn {
 
 /*Form Panel*/
 .formpanel {
-  position: relative;
-  justify-content: center;
-  text-align: center;
+	position: relative;
+	justify-content: center;
+	text-align: center;
 	margin-top: 20px;
 }
 
 .formpanel .formrow {
-  /* justify-content: center;
+	/* justify-content: center;
   text-align: center; */
 	margin-bottom: 15px;
 }
@@ -2895,18 +2896,18 @@ a.wit-btn {
 	border-radius: 0;
 	padding: 10px 13px;
 	border-color: #ddd;
-  justify-content: center;
-  text-align: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .formpanel select.form-control {
-  justify-content: center;
-  text-align: center;
+	justify-content: center;
+	text-align: center;
 	padding: 13px 12px;
 	border-radius: 0;
 	line-height: 45px;
-  justify-content: center;
-  text-align: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .formpanel textarea.form-control {
@@ -2928,7 +2929,7 @@ a.wit-btn {
 	background: rgb(0, 0, 0);
 }
 
-.uploadphotobx {
+/* .uploadphotobx {
 	border: 3px dashed #ddd;
 	background: #eee;
 	padding: 30px 30px;
@@ -2983,7 +2984,7 @@ a.wit-btn {
 	background: #000000;
 	box-shadow: 0 0 10px #ccc;
 	color: #fff;
-}
+} */
 
 .fileattached {
 	background: #000000;
@@ -3039,18 +3040,20 @@ a.wit-btn {
            == User Account css==
 *************************************************/
 .userccount {
-  justify-content: center;
-  border: 2px solid #000000;
-  box-shadow: 0 12px 16px 0 rgb(146, 146, 146), 0 17px 50px 0 rgba(0,0,0,0.19);
-  border-radius: 10px;
+	justify-content: center;
+	border: 2px solid #000000;
+	box-shadow: 0 12px 16px 0 rgb(146, 146, 146), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 10px;
 	background: #fff;
 	border: 1px solid #ddd;
 	padding: 25px 30px;
 }
-.userccount:hover{
-  box-shadow: 0 12px 16px 0 rgba(14, 8, 8, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+.userccount:hover {
+	box-shadow: 0 12px 16px 0 rgba(14, 8, 8, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
 }
+
 .userccount p {
 	text-align: center;
 	line-height: 24px;
@@ -3059,7 +3062,7 @@ a.wit-btn {
 
 .userccount h5 {
 	font-size: 20px;
-  text-align: center;
+	text-align: center;
 	color: #555;
 	font-weight: 700;
 	margin-bottom: 15px;
@@ -4323,4 +4326,3 @@ blockquote:after {
 	font-size: 30px;
 	color: #333;
 }
-
