@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'clamp';
+} 
+.logo-name{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 35px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+
+}
+.logo-name:hover{
+  color: rgb(130, 232, 246);
+ }
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  width: 100px;
+  height: 100px;  
+}
+nav ul{
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+/* nav ul li button{
+  color: white;
+  margin: 0 5px;
+} */
+
+nav ul li{
+  /* font-size: 20px; */
+  color: white;
+  margin: 0 5px;
+}
+nav ul li a{ 
+  
+/* float: right;  */
+ color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+  color: rgb(255, 255, 255);
+ }
+nav .menu-btn i{
+  color: rgb(130, 232, 246);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    color: rgb(130, 232, 246);
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    right: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: cyan;
+  }
+}
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Dropdown Button */
+/* .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+} */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */

@@ -1,0 +1,115 @@
+.settings {
+margin-left: 25%;
+  width: 50%;
+  margin-top: 50px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 12px 16px 0 rgb(255, 255, 255), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 10px;
+  }
+  .setting:hover{
+    /* width: 500px; */
+    /* opacity: 120%; */
+    /* background-color: black; */
+    /* color: white; */
+    box-shadow: 0 12px 16px 0 rgba(14, 8, 8, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsTitleUpdate {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.settingsTitleDelete {
+  color: red;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.settingsPP > img {
+  height: 70px;
+  width: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  margin-left: 10px;
+  color: white;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.settingsPPButton:focus {
+  outline-style: none;
+}
+
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsPPInput {
+  width: 30%;
+}
+
+.settingsForm > input {
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border: none;
+  width: 70%;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.settingsSubmitButton {
+  align-self: center;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(232, 227, 227);
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsSubmitButton:hover {
+  background-color: rgb(62, 62, 62);
+}
